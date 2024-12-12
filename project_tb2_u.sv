@@ -17,7 +17,7 @@ module project_tb2_u;
 // device under test goes here
 // choose "tree," "cascade," "CSA," or other topology
 //  fir4rca_cas_u #(.w(w)) f1(.*);
-  fir4c_fig11_42 #(.w(w)) f1(.*);
+  designed_csa #(.w(w)) f1(.*);
 
   always begin			           	  // tick ... tock 
     #5ns clk = 'b1;
@@ -29,7 +29,7 @@ module project_tb2_u;
     $display("a   s  s_b  diff");
     #10ns reset = '0;
 	for(int i = 0; i < 25; i++) begin
-	  a   = $random;// 2**(i/4);//$random;
+	  a   = $random;//'b0100;// 2**(i/4);//$random;
 	  #8ns $displayh(a,,,,,s,,,,s_b1,,,,dif1);
 	  #2ns;
 	end  

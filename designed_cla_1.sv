@@ -1,5 +1,5 @@
 // Extended 4-input Carry Save Adder (CSA) for summing N-length numbers
-module fir4csa #(parameter w = 16)(
+module designed_csa #(parameter w = 16)(
   input                       clk, 
                               reset,
   input        [w-1:0] a, 		// serial input -- filter will sum 4 consecutive values
