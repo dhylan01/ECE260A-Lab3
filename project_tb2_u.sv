@@ -17,7 +17,7 @@ module project_tb2_u;
 // device under test goes here
 // choose "tree," "cascade," "CSA," or other topology
 //  fir4rca_cas_u #(.w(w)) f1(.*);
-  designedfir4rca_cas_u #(.w(w)) f1(.*);
+  deasignedfir4rca_CLA #(.w(w)) f1(.*);
 
   always begin			           	  // tick ... tock 
     #5ns clk = 'b1;
